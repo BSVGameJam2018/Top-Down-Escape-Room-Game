@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class KeypadScript : MonoBehaviour {
@@ -33,6 +34,7 @@ public class KeypadScript : MonoBehaviour {
     {
         if (guess.IsActive() && isRight()) {
             Debug.Log("Right answer");
+            SceneManager.LoadScene("Endgame");
         }
         else if (guess.IsActive())
         {   

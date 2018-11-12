@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242306422}
   - component: {fileID: 1242306421}
+  - component: {fileID: 1242306424}
   - component: {fileID: 1242306423}
   m_Layer: 0
   m_Name: intro_2dGame
@@ -146,14 +147,14 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 0
-  m_AspectRatio: 2
+  m_AspectRatio: 3
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 1242306423}
   m_DirectAudioVolumes:
-  - 1
+  - 0.252
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -271,6 +272,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1242306424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242306420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba554bfc7f5f154695c67eb4e5de55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1242306421}
+  sceneName: SampleScene
 --- !u!1 &1292480004
 GameObject:
   m_ObjectHideFlags: 0
