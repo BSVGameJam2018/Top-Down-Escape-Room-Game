@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -62,7 +63,12 @@ public class PlayerController : MonoBehaviour {
             animate(Moving.right);
             direction = Vector2.right;
         }
-        
+
+        else if (Input.GetKeyUp(KeyCode.Return))
+        {
+            Button continueButton = GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>();
+            continueButton.onClick.Invoke();
+        }
         else
         {
             animate(Moving.none);

@@ -5,7 +5,8 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
 
-    public Dialogue dialogue = new Dialogue();
+    [SerializeField]
+    private Dialogue dialogue = new Dialogue();
 
     public void TriggerDialogue()
     {
