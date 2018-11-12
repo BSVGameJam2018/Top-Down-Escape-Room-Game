@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -44,6 +45,11 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             direction = Vector2.right;
+        }
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            Button continueButton = GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>();
+            continueButton.onClick.Invoke();
         }
     }
 

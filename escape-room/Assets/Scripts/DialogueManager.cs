@@ -31,19 +31,34 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
+        sentences.Enqueue(">> Press the spacebar to interact with objects");
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
+        Button continueButton = GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>();
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
+        else if (sentences.Count == 1)
+        {
+            nameText.text = "terminal";
+        }
 
         string sentence = sentences.Dequeue();
+
+        if (sentences.Count == 0)
+        {
+            continueButton.interactable = false;
+        }
+        else
+        {
+            continueButton.interactable = true;
+        }
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -56,6 +71,12 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
+    }
+
+    public void addDoorFailureMessage()
+    {
+        sentences.Enqueue(">> The door does not open");
+        sentences.Enqueue(sentences.Dequeue());
     }
 
     void EndDialogue()

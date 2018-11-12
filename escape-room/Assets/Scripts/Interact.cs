@@ -5,12 +5,17 @@ using UnityEngine;
 public class Interact : MonoBehaviour {
 
     private bool playerinside = false;
+    DialogueTrigger dialogueTrigger;
+
+    void Start()
+    {
+        dialogueTrigger = GetComponent<DialogueTrigger>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player"))
         {
-            Debug.Log("Entering...");
             playerinside = true;
         }
     }
@@ -19,7 +24,6 @@ public class Interact : MonoBehaviour {
     {
         if (collision.tag.Equals("Player"))
         {
-            Debug.Log("Exiting...");
             playerinside = false;
         }
     }
@@ -28,13 +32,29 @@ public class Interact : MonoBehaviour {
         return playerinside && Input.GetKeyUp(KeyCode.Space);
     }
 
+    private bool isDoor()
+    {
+        return gameObject.name.Equals("Door");
+    }
+
     private void FixedUpdate()
     {
         if (isInteractedWith())
         {
-            //Run the method to interact with the object
-            Debug.Log("INTERACTION!!!!!");
+            //Trigger a change in the dialogue box
+            dialogueTrigger.TriggerDialogue();
+            // if the door is interacted with, make the input box appear
+            KeypadScript keyscript = FindObjectOfType<KeypadScript>();
+            if (isDoor())
+            {   
+                keyscript.returnField();
+            }
+            else
+            {
+                keyscript.removeField();
+            }
         }   
+        
     }
 
 }

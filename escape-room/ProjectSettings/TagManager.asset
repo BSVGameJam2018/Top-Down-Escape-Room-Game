@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ContinueButton
+  - KeyInput
   layers:
   - Default
   - TransparentFX
@@ -49,4 +51,7 @@ TagManager:
     locked: 0
   - name: Units
     uniqueID: 148245483
+    locked: 0
+  - name: UI
+    uniqueID: 3569193577
     locked: 0
