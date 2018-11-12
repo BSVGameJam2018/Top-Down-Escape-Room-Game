@@ -58,6 +58,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void DisplayTerminal()
+    {   
+        nameText.text = "terminal";
+        sentences.Enqueue(">> Press the spacebar to interact with objects");
+        DisplayNextSentence();
+    }
+
     void EndDialogue()
     {
         //animator.SetBool("IsOpen", false);

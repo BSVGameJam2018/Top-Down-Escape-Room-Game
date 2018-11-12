@@ -5,12 +5,17 @@ using UnityEngine;
 public class Interact : MonoBehaviour {
 
     private bool playerinside = false;
+    DialogueTrigger dialogueTrigger;
+
+    void Start()
+    {
+        dialogueTrigger = GetComponent<DialogueTrigger>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player"))
         {
-            Debug.Log("Entering...");
             playerinside = true;
         }
     }
@@ -19,7 +24,6 @@ public class Interact : MonoBehaviour {
     {
         if (collision.tag.Equals("Player"))
         {
-            Debug.Log("Exiting...");
             playerinside = false;
         }
     }
@@ -32,8 +36,8 @@ public class Interact : MonoBehaviour {
     {
         if (isInteractedWith())
         {
-            //Run the method to interact with the object
-            Debug.Log("INTERACTION!!!!!");
+            //Trigger a change in the dialogue box
+            dialogueTrigger.TriggerDialogue();
         }   
     }
 
