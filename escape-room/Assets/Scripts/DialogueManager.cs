@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
+        sentences.Enqueue(">> Press the spacebar to interact with objects");
         DisplayNextSentence();
     }
 
@@ -41,6 +41,10 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
             return;
+        }
+        else if (sentences.Count == 1)
+        {
+            nameText.text = "terminal";
         }
 
         string sentence = sentences.Dequeue();
@@ -56,13 +60,6 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
-    }
-
-    public void DisplayTerminal()
-    {   
-        nameText.text = "terminal";
-        sentences.Enqueue(">> Press the spacebar to interact with objects");
-        DisplayNextSentence();
     }
 
     void EndDialogue()

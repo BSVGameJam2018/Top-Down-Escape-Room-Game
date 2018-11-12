@@ -229,6 +229,8 @@ GameObject:
   - component: {fileID: 467081197}
   - component: {fileID: 467081196}
   - component: {fileID: 467081195}
+  - component: {fileID: 467081200}
+  - component: {fileID: 467081199}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -845,6 +847,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &467081199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467081193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35df88938a0dc54d84819c26dfca04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &467081200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467081193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0546a2915d0f543b09462bb726ea3209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: DOOR
+    sentences:
+    - '>> THE LOCK HAS A LETTER KEYPAD. TYPE IN YOUR GUESS'
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5799,7 +5827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 46292268}
-        m_MethodName: DisplayTerminal
+        m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6067,6 +6095,8 @@ GameObject:
   - component: {fileID: 895275324}
   - component: {fileID: 895275323}
   - component: {fileID: 895275322}
+  - component: {fileID: 895275327}
+  - component: {fileID: 895275326}
   m_Layer: 0
   m_Name: Dresser
   m_TagString: Untagged
@@ -6096,7 +6126,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -4.7733936, y: 2.3686619}
@@ -6701,6 +6731,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &895275326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895275320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0546a2915d0f543b09462bb726ea3209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: NOTE IN THE DRESSER
+    sentences:
+    - '>> YOU FIND A NOTE IN THE TOP LEFT DRAWER OF THE DRESSER...'
+    - '>> ... THE ONLY THING WRITTEN IS "110"
+
+'
+--- !u!114 &895275327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 895275320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35df88938a0dc54d84819c26dfca04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916901345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6792,7 +6851,7 @@ TilemapCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0, y: 0}
 --- !u!483693784 &1020019379
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -7605,7 +7664,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: '>> Press the spacebar to interact with objects '
 --- !u!222 &1177345258
 CanvasRenderer:
@@ -7858,6 +7917,8 @@ GameObject:
   - component: {fileID: 1730508299}
   - component: {fileID: 1730508298}
   - component: {fileID: 1730508297}
+  - component: {fileID: 1730508302}
+  - component: {fileID: 1730508301}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
@@ -8582,6 +8643,38 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1730508301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730508295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0546a2915d0f543b09462bb726ea3209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: INTRO TO CRYPTOGRAPHY
+    sentences:
+    - '>> A PARTICULAR BOOK IN THE SHELF CATCHES YOUR EYE...
+
+'
+    - '>> ... a Caesar cipher is one of the simplest and most widely known encryption
+      techniques...'
+    - '>> ... For example, with a right shift of 3, A would be replaced by D, B would
+      become E, and so on.'
+--- !u!114 &1730508302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730508295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35df88938a0dc54d84819c26dfca04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914632643
 GameObject:
   m_ObjectHideFlags: 0

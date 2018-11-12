@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
         {
             direction = Vector2.right;
         }
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.Return))
         {
             Button continueButton = GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>();
             continueButton.onClick.Invoke();
