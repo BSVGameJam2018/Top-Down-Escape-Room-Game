@@ -73,6 +73,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void addDoorFailureMessage()
+    {
+        sentences.Enqueue(">> The door does not open");
+        sentences.Enqueue(sentences.Dequeue());
+    }
+
     void EndDialogue()
     {
         //animator.SetBool("IsOpen", false);

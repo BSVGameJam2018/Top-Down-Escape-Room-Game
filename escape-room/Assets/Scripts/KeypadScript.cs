@@ -34,9 +34,11 @@ public class KeypadScript : MonoBehaviour {
         if (guess.IsActive() && isRight()) {
             Debug.Log("Right answer");
         }
-        else
-        {
+        else if (guess.IsActive())
+        {   
             removeField();
+            DialogueManager diagManager = FindObjectOfType<DialogueManager>();
+            diagManager.addDoorFailureMessage();
             return;
         }
 	}
