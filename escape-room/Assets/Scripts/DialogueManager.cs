@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        Button continueButton = GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>();
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -48,6 +49,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+
+        if (sentences.Count == 0)
+        {
+            continueButton.interactable = false;
+        }
+        else
+        {
+            continueButton.interactable = true;
+        }
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
