@@ -11,14 +11,13 @@ public class Intro : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (videoPlayer.frame == (long)videoPlayer.frameCount)
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        StartCoroutine(WaitAndLoad(11f, "SampleScene"));
+    }
+
+    // Update is called once per frame
+    private IEnumerator WaitAndLoad(float value, string scene)
+    {
+        yield return new WaitForSeconds(value);
+        SceneManager.LoadScene(scene);
     }
 }
