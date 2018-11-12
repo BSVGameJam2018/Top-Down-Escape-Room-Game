@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: d18ef01ac72ef4244bde0ce26ad18048
+guid: 51ebb510933461f4c8b368d4c2248d4c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: shadow_0
-    21300002: shadow_1
-    21300004: shadow_2
-    21300006: shadow_3
+    21300000: universal-lpc-sprite_male_01_walk-3frame_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shadow_0
+      name: universal-lpc-sprite_male_01_walk-3frame_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 57
+        y: 67
+        width: 30
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,67 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92e0a53fe45dd274887d74025b4a22df
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shadow_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6a95a772e6927448b71d27254786bfa
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shadow_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f01f24824c9462458167df1a9385aee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shadow_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4949021b1c64094aa9110ecb4e449ca
+      spriteID: 1ad96f97ec8e2f14eae6f9a120282c47
       vertices: []
       indices: 
       edges: []
@@ -170,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9cf19abf34ac44940bd09fc979bcaadd
+    spriteID: 4c4346a359f2e0b4186fbb51723f01f1
     vertices: []
     indices: 
     edges: []
